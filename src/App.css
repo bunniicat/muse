@@ -48,9 +48,16 @@ body {
   text-transform: uppercase;
 }
 
-/*weather*/
-.weather_container {
+.Apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
   margin: 5rem 2rem;
+  align-items: flex-start;
+}
+
+.weather_container,
+.todo_container {
   padding: 2rem;
   border-radius: 2.4rem;
   box-shadow: var(--shadow);
@@ -58,13 +65,15 @@ body {
   max-width: fit-content;
 }
 
-.weather_input {
+.weather_input,
+.todo_input {
   padding: 0.8rem 2rem;
   border-radius: 2.4rem;
   border: none;
 }
 
-.weather_btn {
+.weather_btn,
+.todo_btn {
   padding: 0.8rem 2rem;
   border-radius: 2.4rem;
   border: none;
@@ -72,9 +81,16 @@ body {
   color: var(--white);
   font-weight: 700;
   margin-left: 1rem;
+  transition: all 0.3s ease;
 }
 
-.weather_info {
+.weather_btn:hover,
+.todo_btn:hover {
+  background-color: var(--purple);
+}
+
+.weather_info,
+.todo_item {
   margin-top: 2rem;
   background-color: rgba(255, 255, 255, 0.418);
   padding: 2rem;
@@ -84,4 +100,20 @@ body {
 
 .weather_info p {
   margin-top: 0.4rem;
+}
+
+.todo_delete {
+  background-color: var(--d-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 2.4rem;
+  padding: 0.3rem 0.5rem;
+  margin-left: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo_delete:hover {
+  transform: scale(1.2);
 }
