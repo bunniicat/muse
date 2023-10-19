@@ -1,38 +1,87 @@
-.App {
+/*variables*/
+/* TO USE: var(--name) */
+
+:root {
+  /*colors*/
+  --black: #101010;
+  --white: #f8f8f8;
+  --gray: rgb(82, 82, 82);
+  --pink: #f72585;
+  --purple: #7209b7;
+  --d-purple: #3a0ca3;
+  --blue: ##5773ef;
+  --d-blue: #07134b;
+
+  /*design details*/
+  --br-1: 1rem;
+  --br-2: 2rem;
+  --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+/*font-family: 'Roboto', sans-serif;*/
+
+/*defaults*/
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--d-blue);
+  color: var(--white);
+}
+
+.heading_1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading_2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading_3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/*weather*/
+.weather_container {
+  margin: 5rem 2rem;
+  padding: 2rem;
+  border-radius: 2.4rem;
+  box-shadow: var(--shadow);
+  background-color: #390ca379;
+  max-width: fit-content;
+}
+
+.weather_input {
+  padding: 0.8rem 2rem;
+  border-radius: 2.4rem;
+  border: none;
+}
+
+.weather_btn {
+  padding: 0.8rem 2rem;
+  border-radius: 2.4rem;
+  border: none;
+  background-color: var(--pink);
+  color: var(--white);
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.weather_info {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.418);
+  padding: 2rem;
+  border-radius: 1.8rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather_info p {
+  margin-top: 0.4rem;
 }
